@@ -1,0 +1,71 @@
+Arguments: 
+  /usr/local/Cellar/node/10.11.0/bin/node /usr/local/Cellar/yarn/1.10.1/libexec/bin/yarn.js add -d -s addon-backgrounds
+
+PATH: 
+  /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+
+Yarn version: 
+  1.10.1
+
+Node version: 
+  10.11.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/addon-backgrounds: Not found
+      at Request.params.callback [as _callback] (/usr/local/Cellar/yarn/1.10.1/libexec/lib/cli.js:61073:18)
+      at Request.self.callback (/usr/local/Cellar/yarn/1.10.1/libexec/lib/cli.js:120166:22)
+      at Request.emit (events.js:182:13)
+      at Request.<anonymous> (/usr/local/Cellar/yarn/1.10.1/libexec/lib/cli.js:121138:10)
+      at Request.emit (events.js:182:13)
+      at IncomingMessage.<anonymous> (/usr/local/Cellar/yarn/1.10.1/libexec/lib/cli.js:121060:12)
+      at Object.onceWrapper (events.js:273:13)
+      at IncomingMessage.emit (events.js:187:15)
+      at endReadableNT (_stream_readable.js:1092:12)
+      at process._tickCallback (internal/process/next_tick.js:63:19)
+
+npm manifest: 
+  {
+    "name": "tutorial-nuxt",
+    "version": "1.0.0",
+    "description": "Nuxt.js project",
+    "author": "Louis <cj654eji618@gmail.com>",
+    "private": true,
+    "scripts": {
+      "dev": "nuxt",
+      "build": "nuxt build",
+      "start": "nuxt start",
+      "generate": "nuxt generate",
+      "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+      "precommit": "npm run lint",
+      "storybook": "start-storybook -p 6006",
+      "build-storybook": "build-storybook"
+    },
+    "dependencies": {
+      "axios": "^0.18.0",
+      "nuxt": "^2.0.0"
+    },
+    "devDependencies": {
+      "@babel/core": "^7.1.6",
+      "@storybook/addon-actions": "^4.0.6",
+      "@storybook/addon-links": "^4.0.6",
+      "@storybook/addons": "^4.0.6",
+      "@storybook/vue": "^4.0.6",
+      "babel-eslint": "^10.0.1",
+      "babel-loader": "^8.0.4",
+      "babel-preset-vue": "^2.0.2",
+      "eslint": "^4.19.1",
+      "eslint-friendly-formatter": "^4.0.1",
+      "eslint-loader": "^2.1.1",
+      "eslint-plugin-vue": "^4.0.0",
+      "storybook-addon-vue-info": "^0.7.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

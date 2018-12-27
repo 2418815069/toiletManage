@@ -1,0 +1,9 @@
+@font-face {
+  font-family: myFont;
+  src: url('./fonts/华文宋体.ttf');
+}
+
+.test {
+  font-size: 100px;
+  font-family: myFont;
+}

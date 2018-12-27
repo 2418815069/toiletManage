@@ -1,0 +1,37 @@
+{
+  "name": "nuxt-test",
+  "version": "1.0.0",
+  "description": "My great Nuxt.js project",
+  "author": "liufang",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.0.0",
+    "@storybook/addon-a11y": "^4.0.9",
+    "@storybook/addon-centered": "^4.0.8",
+    "@storybook/addon-knobs": "^4.0.9",
+    "@storybook/addon-notes": "^4.0.8",
+    "@storybook/addon-storysource": "^4.0.9",
+    "cross-env": "^5.2.0",
+    "nuxt": "^2.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.6",
+    "@storybook/addon-actions": "^4.0.9",
+    "@storybook/addon-links": "^4.0.9",
+    "@storybook/addon-options": "^4.0.8",
+    "@storybook/addon-viewport": "^4.0.9",
+    "@storybook/addons": "^4.0.9",
+    "@storybook/vue": "^4.0.6",
+    "babel-loader": "^8.0.4",
+    "babel-preset-vue": "^2.0.2",
+    "nodemon": "^1.11.0"
+  }
+}
