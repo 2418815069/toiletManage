@@ -1,0 +1,65 @@
+//智慧城市厕所
+Smart_City_Toilet
+
+
+//管理员账号
+Administrator_table
+ID 	 int 
+name	  varchar(20)	//名称   
+Account   varchar(20)   //账号
+password  varchar(100)  //密码
+
+
+//评价(吐槽)
+evaluate_table
+ID    int
+username     varchar(20)		
+nameID  varchar(10)				//厕所获取数据ID
+HealthStar   varchar(2)			//卫生星级
+time 		 varchar(20)		//时间
+evaluate     text				//评价内容
+
+
+//报修
+repairs_table
+ID    			int
+name			varchar(50)				//厕所名称
+RepairsPart		varchar(50)				//保修事项
+description		varchar(100)			//文字描述
+picture			varcahr(100)			//图片
+headphoto		varchar(100)			//头像
+weixinName		varchar(30)				//微信名称
+longitude		varchar(100)			//地理经度
+latitude		varchar(100)			//地理纬度
+nameID  		varchar(100)			//厕所获取数据ID
+time 			varchar(20)				//时间
+tag				varchar(2)   			//状态
+site			varchar(200)			//地址
+
+//厕所管理
+toiletDetails_table
+ID   				int 
+picture				text				//厕所图片
+name   				varchar(50)			//厕所名称
+nameID  			varchar(100)			//厕所获取数据ID
+HealthStar   		varchar(2)			//卫生星级
+site				varchar(200)		//地址
+warrantyNumber		int					//保修次数
+LikeNumber			int					//点赞次数
+tauntNumber			int					//吐槽次数
+
+//参数设置
+parameter_table
+ID			int
+repairs   varchar(100)   //报修
+name	  varchar(30)	//公司名称
+evaluate  varchar(100)  //点赞
+shits	  varchar(100)	//吐槽	
+access_token  text		//access_token数据
+
+
+
+
+
+
+
