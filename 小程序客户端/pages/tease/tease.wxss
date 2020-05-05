@@ -1,0 +1,70 @@
+/* pages/tease/tease.wxss */
+.tease view.tr{
+  display: flex;
+  width: 100%;
+  margin: 40rpx 0px;
+}
+.col-3{
+  width: 23.33333%;
+  text-align: center;
+  font-size: 30rpx;
+  margin-left:5%; 
+}
+.col-9{
+  width: 66.6666%;
+  text-align:left;
+  line-height: 50rpx;
+  height: 50rpx;
+  overflow: hidden;
+}
+.td_img{
+  width: 100%;
+  display: inline-block;
+  height: 100%;
+}
+.Cprompt{
+  font-size: 28rpx;
+  float: right;
+  line-height: 50rpx;
+  height:50rpx;
+  width:40%;
+  color:#818181;
+}
+.tes_igm{
+  width:40rpx;
+  height:40rpx;
+  padding: 4rpx;
+}
+.subcolor{
+  background-color:#15B932;
+  width: 60%;
+}
+.repiar_texts{
+  width: 85%;
+  height: 250rpx;
+  margin:80rpx auto 0;
+  border: 1rpx solid #EF8B4D;
+ position: relative;
+}
+.repiar_texts>textarea{
+  width: 100%;
+  height: 100%;
+  padding:20rpx;
+  font-size:26rpx;
+}
+.repiar_texts>span{
+  position: absolute;
+  right: 15rpx;
+  bottom: 0;
+  color: #ddd;
+}
+.sub{
+  position: fixed;
+  bottom: 0;
+  width: 85%;
+  margin: 0 7.5% 1%;
+  border-radius: 45rpx;
+  background-color: #15B932;
+  color:#fff;
+  line-height: 83rpx;
+}

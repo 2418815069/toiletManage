@@ -1,0 +1,55 @@
+<!--pages/repair/repair.wxml-->
+<!-- 保修页面 -->
+<view class='repair_body'>
+  <view class='repair_sele'>
+    <view style='margin:26rpx 10rpx 26rpx 0rpx;color:#818181;font-size:27rpx;'>保修原因:</view>
+    <view class='repair_sele_item'>
+      <view class="rsi_li  {{item.state==2? 'active':''}}" wx:for="{{csw}}" bindtap='repair_text' data-index="{{index}}">{{item.name}}</view> </view>
+  </view>
+  <view class='repiar_texts'>
+      <textarea bindinput='texts_num' type='text' maxlength='30'  placeholder='如果以上都不是,你可以在这里简单描述...' placeholder-class='place_word'></textarea>
+      <span>{{word_size}}/30</span>
+  </view>
+  <view class='repair_picture'>
+    <view class='pic_button' bindtap='re_select' wx:if="{{repicture==0}}">
+      <image src='../../image/pic.png'></image>
+    </view>
+    <view class='image_show' wx:if="{{repicture==1}}">
+    <view class='image_boxs' wx:for="{{upimgae}}">
+      <image bindtap='repair_image' mode='aspectFill' data-index="{{index}}" src='{{item}}'></image>    
+      <view class='quxiao_image' data-index="{{index}}" bindtap='quxiao_image' ><image src='../../image/reduce.png'></image></view>
+    </view>
+        <view class='image_list_2' wx:if="{{list_two==1}}" bindtap='re_select_two'>
+          <view class='add_ss'>+</view>
+        </view>
+    </view>
+  </view>
+  <!-- <button open-type="openSetting">打开授权设置页</button> -->
+  <!-- <view class='canuses'  wx:if="{{canuse==1}}">
+    <view class='can_title'>授权使用用户名和头像</view>
+    <view class='can_button'>
+      <button class='sq_button'  open-type="getUserInfo" bindgetuserinfo="onGotUserInfo">授权</button>
+      <button class='can_quxiao' bindtap='can_quxiao'>取消</button>
+    </view>
+  </view> -->
+  <form bind:submit="testSubmit" report-submit="true" class='repair_button'>
+        <button form-type="submit" wx:if="{{reSelect==1}}" class="btn sub" bindtap='subrepair'  open-type="getUserInfo" bindgetuserinfo="onGotUserInfo">提交</button>
+  </form>
+</view>
+<!-- <view style='width:100%;text-align: center'>感谢您提供的信息</view>
+<view class='table tad'>
+  <view class='tr'>
+      <view class='td' wx:for="{{csw}}">
+          <view class="tts {{item.state==2? 'active':''}}" data-text='{{item.name}}' bindtap='repair_text'>{{item.name}}</view>
+      </view>
+  </view>
+  <view class='tr'>
+    <view class='td' wx:for="{{csn}}">
+           <view class="tts {{item.state==2?'active':''}}" data-text='{{item.name}}' bindtap='repair_text'>{{item.name}}</view>
+      </view>
+  </view>
+</view>
+<view class='submit'>
+  <button wx:if="{{reSelect==1}}" class="btn sub subcolor" bindtap='subrepair'>提交</button>
+</view> -->
+

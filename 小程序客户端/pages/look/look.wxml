@@ -1,0 +1,7 @@
+<!--pages/look/look.wxml-->
+<map id="map" style="width: 100%; height: {{syshigth}}px;" polyline="{{polyline}}" longitude="{{longitude?longitude:lon}}" latitude="{{latitude?latitude:lat}}" bindtap EventHandle="tap" scale="{{scale}}" controls="{{controls}}" bindcontroltap="controltap"
+    markers="{{markers}}" data-id="{{markers}}" bindmarkertap="markertap"  show-location show-compass='true'>
+</map> 
+<cover-view id='newimage' bindtap="stapadd" class="{{animationData==1?'animationDatass' :''}}">
+    <cover-image src='../../image/cxdw.png'></cover-image>
+</cover-view>

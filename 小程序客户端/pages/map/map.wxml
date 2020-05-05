@@ -1,0 +1,13 @@
+<!--pages/map/map.wxml-->
+<view>
+  <view class='sousuo'>
+      <input value='{{value}}' bindinput='texts_num'  placeholder='请您输入目的地' placeholder-class='place-holder' ></input>
+      <image src='../../image/search.png' bindtap='sousuoClick'></image>
+  </view>
+  <map id='map' style='width:100%;height:{{syshigth}}px;' longitude="{{longitude}}"  latitude="{{latitude}}"
+  markers="{{markers}}" scale='{{scale}}' data-id="{{markers}}" polyline="{{polyline}}"  bindmarkertap="markertap" show-location >
+  </map>
+  <cover-view id='newimage' bindtap="stapadd" class="{{animationData==1?'animationDatass' :''}}">
+    <cover-image src='../../image/cxdw.png'></cover-image>
+  </cover-view>
+</view>

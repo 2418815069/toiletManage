@@ -1,0 +1,26 @@
+<!--pages/tease/tease.wxml-->
+<view class='table tease' style='heigth:{{}}'>
+  <view style='margin:26rpx 10rpx 26rpx 7.5%;color:#818181;font-size:27rpx;'>感谢您的评价</view>
+  <view class='tr' wx:for="{{par}}">
+    <view class='td col-3'>
+      <view>{{item.name}}</view>
+    </view>
+    <view class='td col-9'>
+      <view class='td_img'>
+      <image class='tes_igm' data-num="{{indexName}}" data-text="{{index}}" wx:for-index="indexName" wx:for="{{item.data}}" src="../../image/star1.png" bindtap='wsfun'></image>
+      <image class='tes_igm' data-num="{{indexName}}"  data-text="{{index}}" wx:for-index="indexName"  wx:for="{{5-item.data}}" src="../../image/star0.png" bindtap='wsfun_k'></image>
+
+       <!-- 汉字提示 -->
+      <view class='Cprompt'>{{item.data==5?'非常满意':item.data==4?'满意':item.data==3?'一般':item.data==2?'差':'很差'}}</view>
+      </view>
+     
+    </view>
+  </view>
+  <view class='repiar_texts'>
+      <textarea bindinput='texts_num' type='text' maxlength='30'  placeholder='你可以在这里简单描述...' placeholder-class='place_word'></textarea>
+      <span>{{word_size}}/30</span>
+  </view>
+</view>
+<view>
+  <button style='margin-top:{{subtease}}px' class="btn sub subcolor"  open-type="getUserInfo" bindgetuserinfo="onGotUserInfo" >提交</button>
+</view>

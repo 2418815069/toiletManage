@@ -1,0 +1,66 @@
+/* pages/classify/classify.wxss */
+
+.table {
+  width: 100%;
+  background-color: white
+}
+
+.tr {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  
+}
+.my-tr{
+ border-bottom:1rpx dotted #ccc;
+ padding-bottom:10rpx;
+}
+
+.th, .td {
+  font-size: 15px;
+  width: 100%;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 5px;
+}
+.t{
+  font-size:18px; 
+}
+.c{
+  color:gray 
+}
+.th {
+  text-align: center;
+  background-color: #dadada;
+}
+.p {
+/* position:relative;
+line-height:20px;
+height:60px; 
+overflow:hidden; */
+max-width: 20em;
+overflow: hidden;
+white-space: nowrap;
+text-overflow: ellipsis; /*超出部分用...代替*/
+}
+.f{
+  float: right
+}
+.flex-td{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+.navi{
+  width:80%
+}
+.weui-cell__ft{
+  width:20%;
+  display: flex;
+  justify-content: center;
+  margin-top:5px;
+}
+.weui-cell__ft image{
+  margin-top:10rpx; 
+}

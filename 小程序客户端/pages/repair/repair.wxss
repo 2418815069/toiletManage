@@ -1,0 +1,168 @@
+/* pages/repair/repair.wxss */
+page{
+  width: 100%;
+  /* height: 100%; */
+}
+.repair_body{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+ /* 保修原因选着 */
+.repair_sele{
+    width: 85%;
+    margin:0 auto;
+}
+.repiar_texts{
+  width: 85%;
+  height: 250rpx;
+  margin:80rpx auto 0;
+  border: 1rpx solid #EF8B4D;
+ position: relative;
+}
+.repiar_texts>textarea{
+  width: 100%;
+  height: 100%;
+  padding:20rpx;
+  font-size:26rpx;
+}
+.repiar_texts>span{
+  position: absolute;
+  right: 15rpx;
+  bottom: 0;
+  color: #ddd;
+}
+.place_word{
+  font-size:28rpx;
+}
+.repair_picture{
+  width: 100%;
+  height: 442rpx;
+  /* padding-top: 6%; */
+}
+.repair_button{
+  width:100%;
+  height: 83rpx;
+  position: fixed;
+  bottom: 12rpx;
+}
+.repair_sele_item{
+  display: flex;
+  flex-wrap:wrap;
+}
+.rsi_li{
+  text-align: center;
+  border: 2rpx solid #ea8e4b;
+  border-radius: 8px;
+  padding: 8rpx 14rpx;
+  margin: 0 16rpx 20rpx 0;
+  font-size: 28rpx;
+  color: #ea8e4b;
+}
+.pic_button{
+  width: 200rpx;
+  height: 200rpx;
+  border: 1px solid #EF8B4D;
+  margin-left: 7.5%;
+  display: flex;
+  margin-top: 40rpx;
+}
+.pic_button>image{
+  width: 70rpx;
+  height: 56rpx;
+  margin: auto;
+}
+.image_show{
+  width: 85%;
+  height: 100%;
+  margin:0 auto; 
+}
+.image_boxs{
+  float: left;
+  width: 189rpx;
+  height: 189rpx;
+  margin-right: 18rpx;
+  margin-top: 10%;
+  position: relative;
+  box-sizing: border-box;
+}
+.image_show>view:first-child{
+  margin-left: 15rpx;
+}
+.image_boxs>image{
+  width: 100%;
+  height: 100%
+}
+.quxiao_image{
+  width: 75rpx;
+  height: 75rpx;
+  position: absolute;
+  top: -12px;
+  right: 0px;
+  z-index: 99;
+  display: block;
+}
+.quxiao_image>image{
+  width: 63%;
+  height: 63%;
+  position: absolute;
+  top: -3px;
+  right: -10px
+}
+.image_list_2{
+  float: left;
+  width: 189rpx;
+  height: 189rpx;
+  margin-right: 18rpx;
+  background-color: #ddd;
+  margin-top: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.add_ss{
+ font-size: 3rem;
+ color: #BDB7B7;
+}
+.active{
+  background-color: #EA8E4B;
+  color: #fff;
+}
+.sub{
+  width: 85%;
+  height: 100%;
+  border-radius: 45rpx;
+  background-color: #15B932;
+  color:#fff;
+  line-height: 83rpx;
+}
+/* 自己做一个调用的对话框 */
+.canuses{
+  width: 450rpx;
+  height: 200rpx;
+  border: 1px solid #ddd;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -100rpx;
+  margin-left: -225rpx;
+  text-align: center;
+  background-color: #dde;
+}
+.can_title{
+  width: 450rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 32rpx;
+}
+.can_button{
+  width: 450rpx;
+  height: 50%;
+  display: flex;
+}
+.can_button>button{
+  width:50%;
+  margin: auto 15rpx;
+  font-size: 30rpx;
+}

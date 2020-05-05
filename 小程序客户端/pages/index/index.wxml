@@ -1,0 +1,105 @@
+<!--pages/index/index.wxml-->
+<view>
+  <view class='sousuo'>
+      <input value='{{sousuo}}' bindinput='texts_num' placeholder='请您输入目的地' placeholder-class='place-holder'> </input>
+      <image src='../../image/search.png' bindtap='sousuoClick'></image>
+  </view>
+  <map id="map" style="width: 100%; height: {{syshigth}}px;" polyline="{{polyline}}" longitude="{{longitude?longitude:lon}}" latitude="{{latitude?latitude:lat}}" bindtap EventHandle="tap" scale="{{scale}}" controls="{{controls}}" bindcontroltap="controltap"
+    markers="{{markers}}" data-id="{{markers}}" bindmarkertap="markertap"  show-location show-compass='true'>
+  </map> 
+  <cover-view id='newimage' bindtap="stapadd" class="{{animationData==1?'animationDatass' :''}}">
+    <cover-image src='../../image/cxdw.png'></cover-image>
+  </cover-view>
+  <cover-view id='looking' bindtap="look">
+    <cover-view>查看智慧厕所</cover-view>
+  </cover-view>
+  <view>
+    <view class="table">
+      <view class="tr ">
+        <view id="0" class="th {{changeclass[0].text}}" bindtap="tapclick">推荐1</view>
+        <view id="1" class="th {{changeclass[1].text}}" bindtap="tapclick">推荐2</view>
+        <view id="2" class="th {{changeclass[2].text}}" bindtap="tapclick">推荐3</view>
+      </view>
+
+      <view class="tr">
+        <view id="3" class="td {{changeclass[0].text}}" bindtap="tapclick">距{{ latandlon[0].distance}}米</view>
+        <view id="4" class="td {{changeclass[1].text}}" bindtap="tapclick">距{{ latandlon[1].distance}}米</view>
+        <view id="5" class="td {{changeclass[2].text}}" bindtap="tapclick">距{{ latandlon[2].distance}}米</view>
+      </view>
+      <view class="tr">
+        <view id="6" class="td1 {{changeclass[0].text}}" bindtap="tapclick">
+          <!-- <image class='{{changeclass[0].img}}' style='width:15px;height:20px' src='../../image/nan.png'></image> -->
+          <span style='font-size:15px'>男</span>
+         <span class="td2 {{changeclass[0].span}}"> {{pagelist2[0].man}}</span>/<span class="td2">{{pagelist2[0].allman}}</span>
+          <!-- <image class='{{changeclass[0].img}}' style='width:15px;height:20px' src='../../image/nv.png'></image> -->
+           <span style='font-size:15px'>女</span>
+          <span class="td2 {{changeclass[0].span}}"> {{pagelist2[0].woman}}</span>/<span class="td2">{{pagelist2[0].allwoman}}</span>
+        </view>
+        <view id="7" class="td1 {{changeclass[1].text}}" bindtap="tapclick">
+          <!-- <image class='{{changeclass[1].img}}' style='width:15px;height:20px' src='../../image/nan.png'></image> -->
+           <span style='font-size:15px'>男</span>
+          <span class="td2 {{changeclass[1].span}}"> {{pagelist2[1].man}}</span>/<span class="td2">{{pagelist2[1].allman}}</span>
+          <!-- <image class='{{changeclass[1].img}}' style='width:15px;height:20px' src='../../image/nv.png'></image> -->
+           <span style='font-size:15px'>女</span>
+          <span class="td2 {{changeclass[1].span}}"> {{pagelist2[1].woman}}</span>/<span class="td2">{{pagelist2[1].allwoman}}</span></view>
+        <view id="8" class="td1 {{changeclass[2].text}}" bindtap="tapclick">
+          <!-- <image class='{{changeclass[2].img}}' style='width:15px;height:20px' src='../../image/nan.png'></image> -->
+           <span style='font-size:15px'>男</span>
+         <span class="td2 {{changeclass[2].span}}">  {{pagelist2[2].man}}</span>/<span class="td2">{{pagelist2[2].allman}}</span>
+          <!-- <image class='{{changeclass[2].img}}' style='width:15px;height:20px' src='../../image/nv.png'></image> -->
+            <span style='font-size:15px'>女</span>
+          <span class="td2 {{changeclass[2].span}}"> {{pagelist2[2].woman}}</span>/<span class="td2">{{pagelist2[2].allwoman}}</span>
+          </view>
+      </view>
+
+      <view class='line'></view>
+      <view class="tr h">
+        <view class='k'></view>
+        <button class="bt btn" bindtap="add">上报</button>
+        <button class="bt btn" bindtap="more">更多</button>
+        <button class="bt btn" bindtap="detail">详情</button>
+        <button class="bt btn" bindtap="daohang">导航</button>
+      </view>
+    </view>
+  </view>
+   <!-- 近3天天气预报 -->
+  <!-- <cover-view class='Weather'>  
+   
+        {{temperature}}  {{now.weather}}  {{now.wind}}  {{now.temperature}}  PM2.5 : {{nowPM25}}
+  </cover-view> -->
+</view>
+<!-- <view class="section lab">
+  <view class="section__title">flex-direction: column</view>
+  <view class="flex-wrp" style=" height: 300px;flex-direction:column;">
+    <view class="flex-item bc_green">1</view>
+    <view class="flex-item bc_red">2</view>
+    <view class="flex-item bc_blue">3</view>
+    <label class='lab' style=''>fdsf</label>
+  </view>
+</view> -->
+
+<!-- longitude:中心精度
+latitude	Number		中心纬度	
+scale	Number	16	缩放级别，取值范围为5-18	
+markers	Array		标记点	
+covers	Array		即将移除，请使用 markers	
+polyline	Array		路线	
+polygons	Array		多边形	2.3.0
+circles	Array		圆	
+controls	Array		控件（即将废弃，建议使用 cover-view 代替）	
+include-points	Array		缩放视野以包含所有给定的坐标点	
+show-location	Boolean		显示带有方向的当前定位点	
+subkey	String	''	个性化地图使用的key，仅初始化地图时有效	2.3.0
+enable-3D	Boolean	false	展示3D楼块(工具暂不支持）	2.3.0
+show-compass	Boolean	false	显示指南针	2.3.0
+enable-overlooking	Boolean	false	开启俯视	2.3.0
+enable-zoom	Boolean	true	是否支持缩放	2.3.0
+enable-scroll	Boolean	true	是否支持拖动	2.3.0
+enable-rotate	Boolean	false	是否支持旋转	2.3.0
+bindmarkertap	EventHandle		点击标记点时触发，会返回marker的id	
+bindcallouttap	EventHandle		点击标记点对应的气泡时触发，会返回marker的id	1.2.0
+bindcontroltap	EventHandle		点击控件时触发，会返回control的id	
+bindregionchange	EventHandle		视野发生变化时触发	2.3.0起增加causedBy 参数区分拖动、缩放和调用接口等来源
+bindtap	EventHandle		点击地图时触发	
+bindupdated	EventHandle		在地图渲染更新完成时触发	1.6.0
+bindpoitap	EventHandle		点击地图poi点时触发	2.3.0 -->

@@ -1,0 +1,305 @@
+/* pages/detail/detail.wxss */
+#detailmain{
+  position: absolute;
+  width:100%;
+  height:100%;
+  background: #fff;
+}
+.hear_img{
+  width:100%;
+   position: relative;
+}
+.hear_img1{
+  width:100%;
+  height:421.875rpx;
+}
+page{
+  background:#e0f9ef;
+  width:100%;
+}
+swiper{
+  width:100%;
+  height:360rpx;
+}
+/* swiper image{
+  width:100%;
+  height:100%;
+} */
+/* 列表 */
+.list{
+  width:100%;
+  background:#fff;
+  position: relative;
+  margin-top:20rpx;
+}
+.one{
+  display:flex;
+  box-sizing:border-box;
+  padding:8rpx 0rpx;
+}
+.img{
+  width:50rpx;
+  height:50rpx;
+}
+.img image{
+  width:50rpx;
+  height:50rpx;
+}
+.right{
+  display:flex;
+  font-size:26rpx;
+  justify-content:space-between;
+  line-height:44rpx;
+  box-sizing:border-box;
+  overflow:hidden;
+
+}
+.right span{
+  margin-right:5px;
+}
+.right view text{
+  color:#ff0000;
+}
+.one1{
+  border:none;
+}
+.zixun{
+  background:#3396fB;
+  padding:6rpx 10rpx;
+  color:#fff;
+  border-radius:6rpx;
+}
+
+
+
+/* 内容 */
+.center{
+  width:100%;
+}
+.top{
+  line-height:60rpx;
+  font-size:28rpx;
+  color:#3396fB;
+  justify-content:center;
+  display:flex;
+}
+.biao{
+  margin:0 12rpx;
+}
+.xian{
+  width:56rpx;
+  height:2rpx;
+  background:#076c2b;
+  margin-top:30rpx;
+}
+
+
+
+
+/* 按钮预约 */
+.btn{
+  width:100%;
+  line-height:98rpx;
+  text-align:center;
+  background:#3396fB;
+  color:#fff;
+  font-size:30rpx;
+}
+.ping_btn{
+  display:flex;
+  justify-content:center;
+  margin-top:60rpx;
+}
+.ping_btn image{
+  width:165rpx;
+  height:50rpx;
+  
+}
+/* 评论条 */
+.lun{
+  margin-top:10rpx;
+  box-sizing:border-box;
+  
+  background:#fff;
+  width:100%;
+  padding-bottom:80rpx;
+}
+.list1{
+  display:flex;
+  padding:20rpx 20rpx 0 20rpx;
+}
+.lsi{
+  border-bottom:1rpx solid #dadada;
+}
+
+.right1{
+  flex:1;
+  padding-left:10rpx;
+}
+.name{
+  font-size:24rpx;
+  color:#1fb8ff;
+  line-height:50rpx;
+}
+.xinxi{
+  color:#3396fB;
+  font-size:24rpx;
+}
+.time{
+  text-align:right;
+  font-size:22rpx;
+  color:#bbbbbb;
+  padding-right:20rpx;
+  line-height:40rpx;
+}
+.yin{
+    overflow: hidden;
+     text-overflow:ellipsis;
+     white-space: nowrap;  
+     flex:1;
+     font-size:30rpx;
+}
+.touxiang image{
+  border-radius:50%;
+}
+.eve_xiu{
+  display: flex;
+  width: 100%;
+  position: fixed;
+  text-align: center;
+  bottom: 0;
+}
+.eve_box_min{
+  margin: 0 auto;
+  display: flex;
+  text-align: center;
+}
+.eve_img>image{
+  width: 50%;
+  height: 50%
+}
+.eve_name{
+  height: 30%;
+  text-align:center;
+  font-size:26rpx;
+}
+
+.table {
+  width: 100%;
+  background-color: white;
+  margin-top:10rpx;
+}
+
+.tr {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.th, .td {
+  font-size: 28rpx;
+  width: 100%;
+  padding:6rpx 0;
+}
+.t{
+  font-size:30rpx; 
+}
+.c{
+  color:gray 
+}
+.th {
+  text-align: center;
+  line-height: 24px;
+}
+.p {
+/* position:relative;
+line-height:20px;
+height:60px; 
+overflow:hidden; */
+max-width: 20em;
+overflow: hidden;
+white-space: nowrap;
+text-overflow: ellipsis; /*超出部分用...代替*/
+}
+.f{
+  float: right
+}
+.conbox{
+  margin-top: -7px;
+  background: #fff;
+  padding:0 40rpx;
+}
+.pos-image{
+  position: absolute;
+  top:0%;
+  right:2%;
+  z-index: 99;
+  color:#fff;
+  width: 55rpx;
+  line-height: 39rpx;
+  text-align: center;
+}
+.wenzi{
+  font-size:30rpx;
+  background-color:rgba(255, 0, 0,0.6); 
+  padding:10rpx;
+}
+.jiao{
+  width:55rpx;
+  height: 30rpx;
+  position: relative;
+}
+.jiaoL{
+  position: absolute;
+  height: 0px;
+  width: 0px;
+  left: 0;
+  border-top: 15rpx solid rgba(255, 0, 0,0.6);
+  border-right:27.5rpx solid transparent;
+}
+.jiaoR{
+  position: absolute;
+  height: 0px;
+  width: 0px;
+  right: 0;
+  border-top: 15rpx solid rgba(255, 0, 0,0.6);
+  border-left:27.5rpx solid transparent;
+}
+.zanwu{
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 99;
+  font-size:50rpx;
+  color:#fff;
+  letter-spacing: 25rpx;
+  text-align: center;
+  line-height:421.875rpx;
+  opacity: 0.6;
+}
+.open-map-icon{
+  position: absolute;
+  bottom:5%;
+  right:10px;
+  font-size:26rpx;
+  color:	#3396fB;
+}
+.open-map-icon image{
+  margin-left:18rpx;
+
+}
+.star-style{
+  width:34rpx;
+  height:34rpx;
+  margin-bottom: 3rpx;
+  padding:0 3rpx;
+}
+.danwei{
+  font-size:26rpx;
+  margin-left:5px;
+  color:#3396fB;
+}
+.my-time{
+  margin-left:5px;
+}

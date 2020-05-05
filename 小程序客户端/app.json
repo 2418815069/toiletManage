@@ -1,0 +1,25 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/repair/repair",
+    "pages/detail/detail",
+    "pages/thanks/thanks",
+    "pages/classify/classify",
+    "pages/tease/tease",
+    "pages/look/look",
+    "pages/add/add",
+    "pages/map/map"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#3396fB",
+    "navigationBarTitleText": "WeChat555",
+    "navigationBarTextStyle": "white"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "sitemapLocation": "sitemap.json"
+}

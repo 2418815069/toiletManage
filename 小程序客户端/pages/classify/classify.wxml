@@ -1,0 +1,26 @@
+<!--pages/classify/classify.wxml-->
+<view class="weui-cells__title">附近厕所推荐</view>
+       <view wx:for="{{lists}}" bindtap='list' wx:key="{{item.id}}" data-id="{{item.id}}">
+       <view class="table">
+       <view class='tr my-tr'>
+       <navigator class="navi" url='../detail/detail?id={{item.id}}&sn=1' hover-class='none'>
+       <view class='td'>
+          <view class="tr">
+            <view class="td t p">{{item.title}}</view>
+          </view>
+          <view class="tr">
+            <view class="td flex-td" > <span>距: {{item._distance}}m</span><span> 男: {{item.Mnum}}/10</span>
+             <span> 女: {{item.Wnum}}/10</span></view>
+            <!-- <view class="td" > 男: {{item.Mnum}}/10  女: {{item.Wnum}}/10</view> -->
+          </view>
+          <view class="tr">
+            <view class="td p c"> 地址：{{item.address}}</view>
+          </view>
+        </view>
+        </navigator>
+        <view class='weui-cell__ft'>
+         <image src='../../image/arrow.png' style='width:60rpx;height:60rpx' bindtap="openmap" data-id='{{item.id}}' data-lat='{{item.location.lat}}' data-lng='{{item.location.lng}}' data-address='{{item.address}}'></image>
+        </view>
+        </view>
+        </view>
+    </view>

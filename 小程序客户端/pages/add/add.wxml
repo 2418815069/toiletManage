@@ -1,0 +1,31 @@
+<!--pages/add/add.wxml-->
+<view>
+
+  <view class='SN'>
+    <view class='SN_biaoti'>请输入厕所的sn:</view>
+    <input placeholder='请输入' bindinput='texts_num'></input>
+    <view class='warn'>请务必确认sn输入正确</view>
+  </view>
+  <view class='SN' wx:if='{{show}}'>
+    <view class='SN_biaoti'>请输入厕所的名称:</view>
+    <input placeholder='请输入' bindinput='name_num'></input>
+  </view>
+  <view class='SN' wx:if='{{show}}'>
+    <view class='SN_biaoti'>请输入厕所的地址:</view>
+    <input placeholder='请输入' bindinput='site_num' ></input>
+  </view>
+   <view class='repair_picture'>
+    <view class="biaoti">请拍摄一张厕所的正面照：</view>
+    <view class='pic_button' bindtap='re_select' wx:if="{{repicture==0}}">
+      <image src='../../image/pic.png'></image>
+    </view>
+    <view class='image_show' wx:if="{{repicture==1}}">
+      <view class='image_boxs' wx:for="{{upimgae}}">
+        <image bindtap='repair_image' mode='aspectFill' data-index="{{index}}" src='{{item}}'></image>
+        <view class='quxiao_image' data-index="{{index}}" bindtap='quxiao_image' ><image src='../../image/reduce.png'></image></view>
+      </view>
+    </view>
+  </view>
+  
+  <button  form-type="submit"  open-type="getUserInfo" bindgetuserinfo="onGotUserInfo" wx:if="{{reSelect==1}}">提交</button>
+</view>

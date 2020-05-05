@@ -1,0 +1,108 @@
+<!--pages/detail/detail.wxml-->
+<!-- 详情头部图片 -->
+<view id='detailmain'>
+  <view class='hear_img'>
+    <image src='{{hear_img}}' class='hear_img1'></image>
+    
+    <!-- <image src='../../image/tuijian.png' class='pos-image' style='width:36px;height:34.5px;display:{{display}}'></image> -->
+    <view class='pos-image' wx:if="{{verify_if}}">
+        <view class='wenzi'>智慧厕所</view>
+        <view class='jiao'>
+          <view class='jiaoL'></view>
+          <view class='jiaoR'></view>
+        </view>
+    </view>
+    <view class='zanwu'  wx:if="{{!verify_if_img}}">暂无图片</view>
+  </view>
+  <view class="conbox">
+    <!-- 地址电话 -->
+    <view class='list'>
+        <view class='one'>
+            <view class='right'>
+                <view class='yin t'>{{point.title}}</view>
+            </view>
+            <!-- <image src='image/tuijian.png'></image> -->
+        </view>
+            
+        <view class='one' bindtap="openmap" >
+            <view class='right'>
+                <view class='yin'>{{point.address}}</view>
+            </view>
+        </view>
+        <view class='one'>
+        <view class='right'><span>距离: </span>
+              <view class='yin' style='color:red;font-size:20px'> {{distance}}</view>米
+        </view>
+            </view>
+        <view class='one'>
+                <view class='right'>时间：步行约
+                    <span class='yin my-time' style='color:red;font-size:20px'>{{time}}</span>分钟
+                </view>
+            </view>
+            <view class='one'>
+                <view class='right'>卫生：
+                    <view class='yin' style='color:red;font-size:20px'>
+                    <image wx:for="{{eva_num}}" class="star-style" src="../../image/star1.png"></image>
+                    <image wx:for="{{5-eva_num}}" class="star-style"  src="../../image/star0.png"></image>
+                    </view>
+                    <!-- <view class='td weui-cell__ft' style='width:20%;'>
+          <navigator url='../detail/detail?id={{item.id}}' class="weui-cell__bd">
+  <image src='../../image/daohang2.png' style='width:30px;height:30px；'></image></navigator>
+          </view> -->
+                </view>
+            </view>
+            <view class="open-map-icon">
+              <image   src='../../image/arrow.png' style='width:60rpx;height:50rpx' bindtap="openmap"></image>
+              <view>导航</view>
+            </view>
+            
+    </view>
+    <view class="table" wx:if="{{verify_if}}">
+        <view class='tr'>
+              <view class='td' style='width:100%'>
+                  <view class="tr" style='background-color: 	#74d584;color:#fff;'>
+                    <view class="th" >性别</view>
+                    <view class="th" >尿斗数</view>
+                    <view class="th">坑位数</view>
+                    <view class="th">驻留人数</view>
+                  </view>
+                  <view class="tr">
+                    <view class="td" style='text-align:center'> 女</view>
+                    <view class="td" style='text-align:center'> --</view>
+                    <view class="td" style='text-align:center'>{{lists.allwomanum}}</view>
+                    <view class="td" style='text-align:center'>{{lists.Wnum}}</view>
+                  </view>
+                  <view class="tr">
+                    <view class="td" style='text-align:center'> 男</view>
+                    <view class="td" style='text-align:center'>{{lists.allurinal}}</view>
+                    <view class="td" style='text-align:center'>{{lists.allmanum}}</view>
+                    <view class="td" style='text-align:center'>{{lists.Mnum}}</view>
+                  </view>
+              </view>
+          </view>
+      </view>
+    </view>
+         <!-- 报修和吐槽 -->
+        <view class="eve_xiu">
+          <view class='eve_box_min'  wx:if="{{verify_if}}">
+            <view class='eve_img' style='width:140rpx;height:140rpx' bindtap="repair">
+              <image src='../../image/baoxiu.png' ></image>
+              <view class='eve_name'>报修</view>
+            </view>
+            <view class='eve_img' style='width:140rpx;height:140rpx'  bindtap="tease">
+              <image src='../../image/dianzan.png'></image>
+              <view class='eve_name'>评价</view>
+            </view>
+          </view>
+          <view class='eve_box_min'  wx:if="{{!verify_if}}">
+            <view class='eve_img' style='width:140rpx;height:140rpx' bindtap="add">
+              <image src='../../image/add1.png' ></image>
+              <view class='eve_name'>添加</view>
+            </view>
+          </view>
+  <!--       
+    <view class='btn'  bindtap="openmap">
+        地图导航
+    </view> -->
+  </view>
+</view>

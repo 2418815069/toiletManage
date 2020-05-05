@@ -1,0 +1,15 @@
+<!--pages/thanks/thanks.wxml-->
+<view class='thanks_page'>
+  <view class='thanks_top'>
+    <view class='t_top_nei'>
+    <image src='../../image/finish.png'></image>
+    <view class='t_top_world'>{{miaoshu}}成功！</view>
+    </view>
+  </view>
+  <view class='thanks_bottom'>
+    <view wx:if="{{miaoshu=='报修'}}">十分感谢您对我们工作的支持，我们会尽快核实并完成维修工作!</view>
+    <view wx:if="{{miaoshu=='评价'}}">十分感谢您对我们工作的支持，我们会认真对待你的评价!</view>
+    <view wx:if="{{miaoshu=='添加'}}">已成功将该厕所建成智慧厕所！</view>
+  </view>
+  <view class='success' bindtap="success_navi">完成</view>
+</view>

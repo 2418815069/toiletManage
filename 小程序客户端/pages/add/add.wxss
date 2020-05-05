@@ -1,0 +1,100 @@
+/* pages/add/add.wxss */
+.repair_picture{
+  width: 100%;
+  height: 320rpx;
+  /* padding-top: 6%; */
+}
+.pic_button{
+  width: 200rpx;
+  height: 200rpx;
+  border: 1px solid #EF8B4D;
+  margin-left: 7.5%;
+  display: flex;
+  margin-top: 40rpx;
+}
+.pic_button>image{
+  width: 70rpx;
+  height: 56rpx;
+  margin: auto;
+}
+.image_show{
+  width: 85%;
+  height: 100%;
+  margin:0 auto; 
+}
+.image_boxs{
+  float: left;
+  width: 189rpx;
+  height: 189rpx;
+  margin-right: 18rpx;
+  margin-top: 10%;
+  position: relative;
+  box-sizing: border-box;
+}
+.image_show>view:first-child{
+  margin-left: 15rpx;
+}
+.image_boxs>image{
+  width: 100%;
+  height: 100%
+}
+.quxiao_image{
+  width: 75rpx;
+  height: 75rpx;
+  position: absolute;
+  top: -12px;
+  right: 0px;
+  z-index: 99;
+  display: block;
+}
+.quxiao_image>image{
+  width: 63%;
+  height: 63%;
+  position: absolute;
+  top: -3px;
+  right: -10px
+}
+.image_list_2{
+  float: left;
+  width: 189rpx;
+  height: 189rpx;
+  margin-right: 18rpx;
+  background-color: #ddd;
+  margin-top: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.add_ss{
+ font-size: 3rem;
+ color: #BDB7B7;
+}
+.SN{
+  padding:20rpx 5%;
+ 
+}
+.SN_biaoti{
+   margin-bottom: 20rpx;
+}
+.SN input{
+  border: 1px dotted #999;
+  padding:8rpx 20rpx;
+}
+.warn{
+  color:red;
+  font-size:30rpx;
+}
+.biaoti{
+  padding: 5rpx 5%;
+}
+button{
+  position: fixed;
+  margin:0 5%;
+  width: 90%;
+  bottom: 2%;
+  border-radius: 45rpx;
+  background-color: #3396fB;
+  color:#fff;
+  line-height: 83rpx;
+}

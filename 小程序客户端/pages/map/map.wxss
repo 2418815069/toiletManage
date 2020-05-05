@@ -1,0 +1,49 @@
+/* pages/map/map.wxss */
+/* 搜索 */
+.sousuo{
+  line-height: 30px;
+  height:30px;
+  width:100%; 
+  background-color:#fff;
+  padding:5px 0;
+}
+.sousuo input{
+    height: 30px;
+    line-height: 30px;
+    background: #eee;
+    width:80%;
+    border-radius: 25px;
+    padding-left: 15px;
+    margin: 0 0;
+    float: left;
+    margin-left:2.5%; 
+    font-size: 14px;
+}
+.sousuo image{
+  width:25px;
+  height: 25px;
+  margin: 2.5px;
+   margin-left:10px;
+}
+.place-holder{
+  color:#bbb;
+}
+/* 刷新特效 */
+#newimage{
+   width: 30px;
+  height: 30px;
+  position: fixed;
+  right: 3%;
+  bottom: 4%; 
+}
+#newimage>image{
+  width: 100%;
+  height: 100%
+}
+.animationDatass{
+  animation: updata 80ms linear infinite
+}
+@keyframes updata{
+  0% {transform: rotate(360deg)}
+  100% {transform: rotate(0deg)}
+}
